@@ -34,16 +34,21 @@ export default class TaskListScreen extends Component {
   }
 
   render() {
-    const list = taskListStore.list.slice() // don't forget copy the list from store
+    const list = taskListStore.list.slice(); // don't forget copy the list from store
+    const appTitle = taskListStore.appTitle;
 
     return (
-      <FlatList
-        style={styles.container}
-        data={list}
-        extraData={list}
-        keyExtractor={(item, index) => `${index}`}
-        renderItem={this.renderItem}
-      />
+      <View  style={styles.container}>
+      <Text style={{fontSize: 20 , color : 'red'}}>{appTitle}</Text>
+        <FlatList
+          style={styles.container}
+          data={list}
+          extraData={list}
+          keyExtractor={(item, index) => `${index}`}
+          renderItem={this.renderItem}
+        />
+      </View>
+
     )
   }
 }
