@@ -7,7 +7,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^31.0.2",
+    "expo": "^46.0.14",
     "expokit": "^31.1.0",
     "mobx": "^5.6.0",
     "mobx-react": "^5.4.2",
